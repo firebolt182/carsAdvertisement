@@ -2,10 +2,13 @@ package org.javaacademy.carad.service;
 
 import lombok.RequiredArgsConstructor;
 import org.javaacademy.carad.dto.AdvertisementDto;
+import org.javaacademy.carad.dto.CarDto;
 import org.javaacademy.carad.entity.Advertisement;
+import org.javaacademy.carad.entity.Car;
 import org.javaacademy.carad.repository.AdRepository;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -29,6 +32,11 @@ public class AdService {
         return adRepository.findAdByDate(localDate);
     }
 
+    public List<Advertisement> findCarsByProperties(String brandName, String color,
+                                          BigDecimal price, String model) {
+        return adRepository.findCarsByProperties(brandName, color, price, model);
+    }
+
     public List<Advertisement> findAll() {
         return adRepository.findAll();
     }
@@ -38,4 +46,7 @@ public class AdService {
     }
 
 
+    public Advertisement findById(int id) {
+        return adRepository.findById(id);
+    }
 }

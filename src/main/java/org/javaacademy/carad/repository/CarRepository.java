@@ -19,13 +19,6 @@ public class CarRepository {
      *  Если указано два и более то сочетание этих полей):
      *  имя бренда, цвет, цена, модель
      */
-    {
-        cars.put(ID, new Car("brand", "color", new BigDecimal("23"), "model"));
-        cars.put(ID, new Car("vaz", "red", BigDecimal.valueOf(100), "2109"));
-        cars.put(ID, new Car("brand", "blue", BigDecimal.valueOf(10), "model"));
-        cars.put(ID, new Car("bmw", "black", BigDecimal.valueOf(10), "model"));
-        cars.put(ID, new Car("vaz", "red", BigDecimal.valueOf(100), "2109"));
-    }
 
     public void add(Car car) {
         cars.put(car.getId(), car);
