@@ -1,10 +1,10 @@
 package org.javaacademy.carad.entity;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.ToString;
-
-import java.time.LocalDate;
 
 @Data
 public class Advertisement {
@@ -14,7 +14,7 @@ public class Advertisement {
     @NonNull
     private String color;
     @NonNull
-    private double price;
+    private BigDecimal price;
     @NonNull
     private String model;
     @NonNull
