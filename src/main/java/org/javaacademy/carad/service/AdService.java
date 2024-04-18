@@ -1,16 +1,13 @@
 package org.javaacademy.carad.service;
 
-import lombok.RequiredArgsConstructor;
-import org.javaacademy.carad.dto.AdvertisementDto;
-import org.javaacademy.carad.dto.CarDto;
-import org.javaacademy.carad.entity.Advertisement;
-import org.javaacademy.carad.entity.Car;
-import org.javaacademy.carad.repository.AdRepository;
-import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.javaacademy.carad.dto.AdvertisementDto;
+import org.javaacademy.carad.entity.Advertisement;
+import org.javaacademy.carad.repository.AdRepository;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor

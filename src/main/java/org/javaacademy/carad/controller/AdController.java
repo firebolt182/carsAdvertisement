@@ -1,17 +1,14 @@
 package org.javaacademy.carad.controller;
 
-import lombok.RequiredArgsConstructor;
-import org.javaacademy.carad.dto.AdvertisementDto;
-import org.javaacademy.carad.dto.CarDto;
-import org.javaacademy.carad.entity.Advertisement;
-import org.javaacademy.carad.entity.Car;
-import org.javaacademy.carad.service.AdService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.javaacademy.carad.dto.AdvertisementDto;
+import org.javaacademy.carad.entity.Advertisement;
+import org.javaacademy.carad.service.AdService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ad")

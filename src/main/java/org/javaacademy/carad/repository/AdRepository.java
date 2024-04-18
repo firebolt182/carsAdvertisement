@@ -1,14 +1,14 @@
 package org.javaacademy.carad.repository;
 
-import lombok.Getter;
-import org.javaacademy.carad.entity.Advertisement;
-import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import lombok.Getter;
+import org.javaacademy.carad.entity.Advertisement;
+import org.springframework.stereotype.Component;
 
 @Component
 public class AdRepository {
@@ -32,21 +32,23 @@ public class AdRepository {
     }
 
     public void deleteById(int id) {
-        /*Advertisement advertisement = advertisements.values().stream()
-                        .filter(ad -> ad.getId() == id).findFirst().orElseThrow();*/
         advertisements.remove(id);
     }
 
-    public List<Advertisement> findCarsByProperties(String brandName, String color, BigDecimal price, String model) {
-        if (brandName == null && color == null && price == null && model == null) {
+    public List<Advertisement> findCarsByProperties(String brandName,
+                                                    String color,
+                                                    BigDecimal price,
+                                                    String model) {
+        if (brandName == null && color == null
+                && price == null && model == null) {
             return new ArrayList<>();
         }
         List<Advertisement> brandCar = new ArrayList<>(advertisements.values().stream()
                 .filter(ad ->
-                        (ad.getBrandName().equals(brandName) ||  brandName == null) &&
-                                (ad.getColor().equals(color) ||  color == null) &&
-                                (ad.getPrice().equals(price) ||  price == null) &&
-                                (ad.getModel().equals(model) ||  model == null))
+                        (ad.getBrandName().equals(brandName) ||  brandName == null)
+                                && (ad.getColor().equals(color) ||  color == null)
+                                && (ad.getPrice().equals(price) ||  price == null)
+                                && (ad.getModel().equals(model) ||  model == null))
                 .toList());
         return brandCar;
     }
